@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import {Routes, Route} from 'react-router-dom'
+import ProtfolioPage from './portfolio/pages/ProtfolioPage';
+import MainLayout from './global/layouts/MainLayout';
+import MainPage from './main/pages/MainPage';
+import NotFoundPage from './global/pages/NotFoundPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return(
+    <>
+      <HelmetProvider>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<MainPage />}></Route>
+
+          <Route path="port" element={<ProtfolioPage />}></Route>
+
+          <Route path="*" element={<NotFoundPage />}></Route>
+        </Route>
+      </Routes>
+      </HelmetProvider>
+    </>
+  )
 }
 
-export default App;
+export default React.memo(App);

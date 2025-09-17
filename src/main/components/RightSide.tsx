@@ -31,7 +31,7 @@ const RightSide = () => {
                         <p>{item}</p>
                     ))}
                 </Introduction>
-                <CTAButton href="/port">My story →</CTAButton>
+                <CTAButton to="/port">My story →</CTAButton>
             </CenteredBlock>
         </RightPanel>
     )

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -94,7 +95,7 @@ export const Introduction = styled.div`
     margin: 20px 0 20px;
 `;
 
-export const CTAButton = styled.a`
+export const CTAButton = styled(Link)`
   color: #facc15;
   font-weight: bold;
   cursor: pointer;

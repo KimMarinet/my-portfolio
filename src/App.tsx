@@ -13,13 +13,13 @@ const App = () => {
       <HelmetProvider>
       <HashRouter>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+
             <Route path='/' element={<MainPage />}></Route>
 
             <Route path="port" element={<ProtfolioPage />}></Route>
 
             <Route path="*" element={<NotFoundPage />}></Route>
-          </Route>
+
         </Routes>
       </HashRouter>
       </HelmetProvider>

@@ -20,6 +20,7 @@ export const LeftPanel = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
+  min-width: 532px;
 `;
 
 export const SubTitle = styled.h1`
@@ -56,6 +57,7 @@ export const ProfileImage = styled.img`
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #22d3ee;
+  margin-bottom: 20px;
 `;
 
 export const RightPanel = styled.div`
@@ -64,6 +66,7 @@ export const RightPanel = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
+  min-width: 532px;
 `;
 
 export const CenteredBlock = styled.div`
@@ -89,10 +92,25 @@ export const MenuItem = styled.span<{active: boolean}>`
   }
 `;
 
-export const Introduction = styled.div`
-    min-width: 450px;
-    text-align: left;
-    margin: 20px 0 20px;
+export const IntroductionWrapper = styled.div`
+  height: 460px;
+  position: relative;
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  min-width: 450px;
+  min-height: 300px;      /* 필요에 따라 높이 조절 */
+`;
+
+export const Introduction = styled.div<{visible: boolean}>`
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: ${(props) => (props.visible ? 1 : 0)};
+    pointer-events: ${(props) => (props.visible ? "auto" : "none")};
+    display: flex;
+    flex-direction: column;
 `;
 
 export const CTAButton = styled(Link)`
@@ -100,6 +118,7 @@ export const CTAButton = styled(Link)`
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 15px;
   &:hover {
     text-decoration: underline;
   }
@@ -109,3 +128,27 @@ export const LogoImage = styled.img`
     width: 250px;
     height: auto;
 `
+
+export const SkillImage1 = styled.img`
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+`
+
+export const SkillImage2 = styled.img`
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  
+  /* 가장자리 투명 처리 */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 75%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+`;

@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import {Routes, Route} from 'react-router-dom'
+import { HashRouter, Routes, Route} from 'react-router-dom'
 import ProtfolioPage from './portfolio/pages/ProtfolioPage';
 import MainLayout from './global/layouts/MainLayout';
 import MainPage from './main/pages/MainPage';
@@ -11,15 +11,17 @@ const App = () => {
   return(
     <>
       <HelmetProvider>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<MainPage />}></Route>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<MainPage />}></Route>
 
-          <Route path="port" element={<ProtfolioPage />}></Route>
+            <Route path="port" element={<ProtfolioPage />}></Route>
 
-          <Route path="*" element={<NotFoundPage />}></Route>
-        </Route>
-      </Routes>
+            <Route path="*" element={<NotFoundPage />}></Route>
+          </Route>
+        </Routes>
+      </HashRouter>
       </HelmetProvider>
     </>
   )

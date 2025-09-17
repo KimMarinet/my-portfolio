@@ -12,7 +12,7 @@ const App = () => {
     <>
       <HelmetProvider>
         <Routes>
-            <Route path='/' element={<MainPage />}></Route>
+            <Route path="/" element={<MainPage />}></Route>
             <Route path="port" element={<ProtfolioPage />}></Route>
             <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>

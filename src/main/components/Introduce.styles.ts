@@ -11,7 +11,7 @@ export const Container = styled.div`
     background: linear-gradient(to bottom, #1f2937 0%, #273550 50%, #364173 100%);
 
     color: #fff;
-    font-family: 'Arial'. sans-serif;
+    font-family: 'Arial', sans-serif;
 `;
 
 export const LeftPanel = styled.div`
@@ -56,7 +56,6 @@ export const ProfileImage = styled.img`
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #22d3ee;
   margin-bottom: 20px;
 `;
 

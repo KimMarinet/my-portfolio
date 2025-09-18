@@ -59,7 +59,7 @@ const RightSide = () => {
             <CenteredBlock>
                 <Menu>
                     {menuList.map((item, index) => (
-                        <MenuItem active={index === active} onClick={() => setActive(index)}>{item}</MenuItem>
+                        <MenuItem active={index === active} onClick={() => setActive(index)}>৹ {item}</MenuItem>
                     ))}
                 </Menu>
                 <IntroductionWrapper>

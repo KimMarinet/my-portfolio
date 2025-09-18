@@ -1,8 +1,9 @@
 import React from "react"
+import PortfolioContainer from "../container/PortfolioContainer"
 
 const PortfolioPage = () => {
     return(
-        <h1>포트폴리오 소개 페이지</h1>
+        <PortfolioContainer />
     )
 }
 

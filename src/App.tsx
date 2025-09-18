@@ -14,9 +14,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainLayout />}>
               <Route index element={<MainPage />}></Route>
-              <Route path="port" element={<ProtfolioPage />}></Route>
-              <Route path="*" element={<NotFoundPage />}></Route>
           </Route>
+          <Route path="port" element={<ProtfolioPage />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
       </HelmetProvider>
     </>

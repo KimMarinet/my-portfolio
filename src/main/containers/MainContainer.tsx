@@ -1,7 +1,7 @@
 import React from "react"
 import LeftSide from "../components/LeftSide"
-import { Container } from "../components/Introduce.styles"
 import RightSide from "../components/RightSide"
+import { Container } from "../components/Introduce.styles"
 
 const MainContainer = () => {
     return (

@@ -41,6 +41,28 @@ body {
   margin: 0;
 }
 
+h2{
+  font-size: 24px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+h4{
+  margin: 0;
+}
+
 p{
   margin: 0;
+}
+
+a {
+  color: inherit;          /* 부모의 글자색 따라감 */
+  text-decoration: none;   /* 밑줄 제거 */
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;   /* hover 시에도 밑줄 제거 */
+  color: #facc15;
 }
